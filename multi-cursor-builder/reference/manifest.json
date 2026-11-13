@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "sourceCommit": "bb947d797f92277360f8fa9818bcff5520c99782",
+  "referenceUrl": "https://daily-brief-canvas-hengyu.hichipipo.chatgpt.site",
+  "files": {
+    "daily-brief/animation.js": "5b788be65cb863df34b0bbe9a807e09bff236ee91323e64b14912ea6b379f217",
+    "daily-brief/app.js": "a33fe15e751cd417b06a3790c22c76c3281f748d1316a35a977d597e6743d1ab",
+    "daily-brief/data/index.json": "fd64bb325d1d8979f163a52938cb0430beef2fbea658c5123d2dc25ba10b21de",
+    "daily-brief/data/issues/2026-11-07.json": "2fd12f72addff7f369156b7435134f454e5647b65d264bfa69f2f249acea8221",
+    "daily-brief/data/issues/2026-11-08.json": "cfbbe4d04eacfd0207bdfb5d9996e5883d943705aaf10f06ad3d6c044d62514f",
+    "daily-brief/data/issues/2026-11-09.json": "2652bc8c4f7e0935a1f802063778ab93ccda659407a277619a38a3add8775f4c",
+    "daily-brief/data/issues/2026-11-10.json": "e9cb5678a074d90bdb947418183436483a10aa5d5dd2917944da447e87f894b9",
+    "daily-brief/data/issues/2026-11-11.json": "6ac3217164a63f691172f521d948b525ca7b0c1ea25fecfe788c59e466629d03",
+    "daily-brief/data/issues/2026-11-12.json": "00260e7cc48c984f949626dcb375049fb00c661949fe4542244a6882084cdc41",
+    "daily-brief/data/issues/2026-11-13.json": "19be5b252ed5731887e6313fe1ac7ef75141f4758a4e3927acfb9955eaa586e9",
+    "daily-brief/index.html": "8b0fab753a8ba9ad71236c18b76efe16e7bb60235c96649a512e1e9173e4401a",
+    "daily-brief/motion.js": "1bc52603309c80017f08a3a860f070939092f18c77f633eb64f0a8adda742df0",
+    "daily-brief/style.css": "0ea2dacf4d842fcaaabec90f2c2509333c7982f248f7147d0b3edacb7ec4bcaa",
+    "original-inspiration.mov": "b8f472e7ac6f1f6affecb2750d5d3b5812ea769c3fee477e0242c40ec7947a01",
+    "tests/editor-dom.cjs": "0981ba7c9a8c4dd475a1f7ccf688265a6fd1d1d16fa5b98e2c21ab080fac7ee8",
+    "tests/motion.cjs": "61935e99e9b33c4b9a142f2e74819be6fc9ec519a08b159596df5843777981ca"
+  }
+}

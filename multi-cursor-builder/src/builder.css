@@ -1,0 +1,46 @@
+.editor-layer,.editor-layer *,.editor-dock,.editor-dock *{box-sizing:border-box}
+/* Animation layer only: intentionally no page reset, typography or layout. */
+.editor-layer,.editor-dock{--ink:#eeefe7;font-family:system-ui,-apple-system,sans-serif}
+.editor-pending{opacity:0!important}
+.editor-built{clip-path:none}
+.editor-layer{position:fixed;inset:0;z-index:40;pointer-events:none;overflow:hidden;contain:strict}
+.editor-actor{display:none;position:absolute;inset:0;pointer-events:none;color:var(--actor-color)}
+.editor-actor.active{display:block}
+.editor-selection{position:absolute;border:1px solid var(--actor-color);box-shadow:0 0 0 1px #1118;z-index:3;pointer-events:none}
+.editor-selection.marquee{background:color-mix(in srgb,var(--actor-color) 9%,transparent);border-style:dashed}
+.editor-selection>i{position:absolute;width:5px;height:5px;background:#131612;border:1px solid var(--actor-color);transform:translate(-50%,-50%)}
+.editor-selection .nw{left:0;top:0}
+.editor-selection .n{left:50%;top:0}
+.editor-selection .ne{left:100%;top:0}
+.editor-selection .e{left:100%;top:50%}
+.editor-selection .se{left:100%;top:100%}
+.editor-selection .s{left:50%;top:100%}
+.editor-selection .sw{left:0;top:100%}
+.editor-selection .w{left:0;top:50%}
+.element-label{position:absolute;left:-1px;top:-16px;color:var(--actor-color);font:8px Manrope,monospace;letter-spacing:.3px;white-space:nowrap}
+.dimension-label{position:absolute;left:50%;top:calc(100% + 5px);transform:translateX(-50%);font:8px Manrope,monospace;white-space:nowrap;background:var(--actor-color);color:#111b0e;padding:2px 5px;border-radius:2px}
+.editor-ghost{position:absolute;overflow:hidden;z-index:2;pointer-events:none;contain:layout paint}
+.editor-ghost>*{pointer-events:none!important}
+.editor-ghost.typing>*::after{content:'';display:inline-block;width:1px;height:.9em;background:currentColor;vertical-align:-.06em;margin-left:2px}
+.editor-cursor{position:absolute;left:0;top:0;z-index:7;will-change:transform;color:var(--actor-color);filter:drop-shadow(0 2px 3px #0008)}
+.editor-cursor>svg,.editor-trail>svg{width:24px;height:29px;display:block;overflow:visible}
+.editor-cursor[data-mode=text]>svg{width:21px}
+.editor-cursor.pressed::after{content:'';position:absolute;left:-3px;top:-3px;width:21px;height:21px;border:1px solid var(--actor-color);border-radius:50%;background:color-mix(in srgb,var(--actor-color) 25%,transparent)}
+.key-hint{position:absolute;left:26px;top:-10px;background:#20251d;border:1px solid #646e5a;border-radius:4px;padding:3px 6px;color:var(--ink);font:10px Manrope,monospace;white-space:nowrap}
+.key-hint:empty{display:none}
+.editor-trail{position:absolute;left:0;top:0;pointer-events:none;z-index:1;opacity:0;color:var(--actor-color)}
+.editor-dock{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(15px);z-index:45;pointer-events:none;display:flex;align-items:center;gap:10px;padding:8px 12px;background:#191e18ed;border:1px solid #52614966;border-radius:30px;box-shadow:0 5px 24px #0008;opacity:0;transition:opacity .25s,transform .25s;white-space:nowrap;font-size:9px;color:#aab6a1;backdrop-filter:blur(12px)}
+.editor-dock.visible{opacity:1;transform:translateX(-50%) translateY(0)}
+.dock-dots{display:flex;padding-right:3px}
+.dock-dots>i{display:block;width:8px;height:8px;border:1px solid #172012;border-radius:50%;margin-right:-2px}
+.dock-count{padding-left:8px;border-left:1px solid #49523e;color:#d0dfc1;font:9px Manrope,monospace}
+@media(max-width:750px){.editor-cursor>svg,.editor-trail>svg{width:20px;height:25px}
+.element-label{font-size:7px}
+.dimension-label{font-size:7px}
+.editor-dock{bottom:13px;font-size:8px}}
+@media(prefers-reduced-motion:reduce){.editor-layer,.editor-dock{display:none}
+.editor-pending{opacity:1!important}}
+.editor-cursor[data-mode=cross]>svg,.editor-cursor[data-mode=resize]>svg,.editor-cursor[data-mode=text]>svg,.editor-cursor[data-mode=grab]>svg{transform:translate(-11px,-13px)}
+.editor-cursor{transition:opacity .16s}
+.editor-actor.resting .editor-cursor{opacity:.48}
+.editor-actor.resting .key-hint{display:none}
